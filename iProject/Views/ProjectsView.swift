@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ProjectsView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    @EnvironmentObject var dataController: DataController
+    
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
     
@@ -31,6 +35,29 @@ struct ProjectsView: View {
                         ForEach(project.projectItems) { item in
                             ItemRow(item: item)
                         }
+                        .onDelete { offsets in
+                            let allItems = project.projectItems
+                            
+                            for offset in offsets {
+                                let item = allItems[offset]
+                                dataController.delete(item)
+                            }
+                            
+                            dataController.save()
+                        }
+                        
+                        if !showClosedProjects {
+                            Button {
+                                withAnimation {
+                                    let item = Item(context: managedObjectContext)
+                                    item.project = project
+                                    item.creation = Date()
+                                    dataController.save()
+                                }
+                            } label: {
+                                Label("Add New Item", systemImage: "plus")
+                            }
+                        }
                     } header: {
                         ProjectHeader(project: project)
                     }
@@ -38,6 +65,20 @@ struct ProjectsView: View {
             }
             .listStyle(.insetGrouped)
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
+            .toolbar {
+                if !showClosedProjects {
+                    Button {
+                        withAnimation {
+                            let project = Project(context: managedObjectContext)
+                            project.closed = false
+                            project.creation = Date()
+                            dataController.save()
+                        }
+                    } label: {
+                        Label("Add Project", systemImage: "plus")
+                    }
+                }
+            }
         }
     }
 }
