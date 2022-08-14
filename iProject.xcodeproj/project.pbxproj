@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB02FDA928A9473E001317F5 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02FDA828A9473E001317F5 /* Sequence-Sorting.swift */; };
 		ABA4C48F28A65D9600524F35 /* iProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C48E28A65D9600524F35 /* iProjectApp.swift */; };
 		ABA4C49128A65D9600524F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C49028A65D9600524F35 /* ContentView.swift */; };
 		ABA4C49328A65D9700524F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA4C49228A65D9700524F35 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB02FDA828A9473E001317F5 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		ABA4C48B28A65D9600524F35 /* iProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA4C48E28A65D9600524F35 /* iProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectApp.swift; sourceTree = "<group>"; };
 		ABA4C49028A65D9600524F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				ABA4C4AD28A7F86C00524F35 /* Item-CoreDataHelpers.swift */,
 				ABA4C4B028A7F91A00524F35 /* Project-CoreDataHelpers.swift */,
 				ABA4C4B228A7FD5300524F35 /* Binding-onChange.swift */,
+				AB02FDA828A9473E001317F5 /* Sequence-Sorting.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				ABA4C4B328A7FD5300524F35 /* Binding-onChange.swift in Sources */,
 				ABA4C4B528A800F600524F35 /* ProjectHeader.swift in Sources */,
 				ABA4C4A228A6667700524F35 /* HomeView.swift in Sources */,
+				AB02FDA928A9473E001317F5 /* Sequence-Sorting.swift in Sources */,
 				ABA4C48F28A65D9600524F35 /* iProjectApp.swift in Sources */,
 				ABA4C4A928A7F19C00524F35 /* EditItemView.swift in Sources */,
 				ABA4C4AB28A7F72800524F35 /* ItemRow.swift in Sources */,

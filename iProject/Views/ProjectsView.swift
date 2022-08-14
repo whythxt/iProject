@@ -12,6 +12,9 @@ struct ProjectsView: View {
     
     @EnvironmentObject var dataController: DataController
     
+    @State private var showingSort = false
+    @State private var sortOrder = Item.SortOrder.optimized
+    
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
     
@@ -32,7 +35,7 @@ struct ProjectsView: View {
             List {
                 ForEach(projects.wrappedValue) { project in
                     Section {
-                        ForEach(project.projectItems) { item in
+                        ForEach(project.projectItems(using: sortOrder)) { item in
                             ItemRow(item: item)
                         }
                         .onDelete { offsets in
@@ -66,18 +69,33 @@ struct ProjectsView: View {
             .listStyle(.insetGrouped)
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .toolbar {
-                if !showClosedProjects {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        withAnimation {
-                            let project = Project(context: managedObjectContext)
-                            project.closed = false
-                            project.creation = Date()
-                            dataController.save()
-                        }
+                        showingSort.toggle()
                     } label: {
-                        Label("Add Project", systemImage: "plus")
+                        Label("Sort", systemImage: "arrow.up.arrow.down")
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if !showClosedProjects {
+                        Button {
+                            withAnimation {
+                                let project = Project(context: managedObjectContext)
+                                project.closed = false
+                                project.creation = Date()
+                                dataController.save()
+                            }
+                        } label: {
+                            Label("Add Project", systemImage: "plus")
+                        }
+                    }
+                }
+            }
+            .confirmationDialog("Sort items", isPresented: $showingSort) {
+                Button("Optimized") { sortOrder = .optimized }
+                Button("Creation Date") { sortOrder = .creationDate }
+                Button("Title") { sortOrder = .title }
             }
         }
     }

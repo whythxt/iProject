@@ -8,6 +8,10 @@
 import Foundation
 
 extension Item {
+    enum SortOrder {
+        case optimized, creationDate, title
+    }
+    
     var itemTitle: String {
         title ?? "New Item"
     }
