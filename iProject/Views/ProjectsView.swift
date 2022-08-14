@@ -32,41 +32,48 @@ struct ProjectsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(projects.wrappedValue) { project in
-                    Section {
-                        ForEach(project.projectItems(using: sortOrder)) { item in
-                            ItemRow(item: item)
-                        }
-                        .onDelete { offsets in
-                            let allItems = project.projectItems
-                            
-                            for offset in offsets {
-                                let item = allItems[offset]
-                                dataController.delete(item)
-                            }
-                            
-                            dataController.save()
-                        }
-                        
-                        if !showClosedProjects {
-                            Button {
-                                withAnimation {
-                                    let item = Item(context: managedObjectContext)
-                                    item.project = project
-                                    item.creation = Date()
+            Group {
+                if projects.wrappedValue.isEmpty {
+                    Text("There is nothing here right now")
+                        .foregroundColor(.secondary)
+                } else {
+                    List {
+                        ForEach(projects.wrappedValue) { project in
+                            Section {
+                                ForEach(project.projectItems(using: sortOrder)) { item in
+                                    ItemRow(project: project, item: item)
+                                }
+                                .onDelete { offsets in
+                                    let allItems = project.projectItems(using: sortOrder)
+                                    
+                                    for offset in offsets {
+                                        let item = allItems[offset]
+                                        dataController.delete(item)
+                                    }
+                                    
                                     dataController.save()
                                 }
-                            } label: {
-                                Label("Add New Item", systemImage: "plus")
+                                
+                                if !showClosedProjects {
+                                    Button {
+                                        withAnimation {
+                                            let item = Item(context: managedObjectContext)
+                                            item.project = project
+                                            item.creation = Date()
+                                            dataController.save()
+                                        }
+                                    } label: {
+                                        Label("Add New Item", systemImage: "plus")
+                                    }
+                                }
+                            } header: {
+                                ProjectHeader(project: project)
                             }
                         }
-                    } header: {
-                        ProjectHeader(project: project)
                     }
+                    .listStyle(.insetGrouped)
                 }
             }
-            .listStyle(.insetGrouped)
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -97,6 +104,8 @@ struct ProjectsView: View {
                 Button("Creation Date") { sortOrder = .creationDate }
                 Button("Title") { sortOrder = .title }
             }
+            
+            SelectSomethingView()
         }
     }
 }
