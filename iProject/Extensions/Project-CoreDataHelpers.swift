@@ -11,7 +11,7 @@ extension Project {
     static let colors = ["Dark Blue", "Dark Gray", "Gold", "Gray", "Green", "Light Blue", "Midnight", "Orange", "Pink", "Purple", "Red", "Teal"]
     
     var projectTitle: String {
-        title ?? "New Project"
+        title ?? NSLocalizedString("New Project", comment: "Create a new project")
     }
     
     var projectDetail: String {

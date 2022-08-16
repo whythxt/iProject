@@ -38,7 +38,7 @@ struct HomeView: View {
                         LazyHGrid(rows: projectRows) {
                             ForEach(projects) { project in
                                 VStack(alignment: .leading) {
-                                    Text("\(project.projectItems.count) \(project.projectItems.count == 1 ? "item" : "items")")
+                                    Text("\(project.projectItems.count) items")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                     
