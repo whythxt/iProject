@@ -9,6 +9,7 @@
 /* GENERAL STRINGS */
 
 "OK" = "OK";
+"Cancel" = "Megszünteti";
 "Delete" = "Töröl";
 "Basic settings" = "Alapbeállítások";
 
@@ -52,7 +53,7 @@
 /* EDITING PROJECTS */
 
 "Edit Project" = "Projekt szerkesztése";
-"Project name" = "Projekt név";
+"Name" = "Név";
 "Description of this project" = "Projekt dokumentáció";
 "Custom project color" = "Egyedi projekt szín";
 
@@ -82,7 +83,7 @@
 /* EDITING ITEMS */
 
 "Edit Item" = "Tétel szerkesztése";
-"Item name" = "Tétel név";
+"Name" = "Név";
 "Description" = "Leírás";
 "Priority" = "Elsőbbség";
 "Low" = "Alacsony";

@@ -10,7 +10,7 @@ import SwiftUI
 struct ItemRow: View {
     @ObservedObject var project: Project
     @ObservedObject var item: Item
-    
+
     var label: Text {
         if item.completed {
             return Text("\(item.itemTitle), completed.")
@@ -20,7 +20,7 @@ struct ItemRow: View {
             return Text(item.itemTitle)
         }
     }
-    
+
     var icon: some View {
         if item.completed {
             return Image(systemName: "checkmark.circle")
@@ -33,7 +33,7 @@ struct ItemRow: View {
                 .foregroundColor(.clear)
         }
     }
-    
+
     var body: some View {
         NavigationLink(destination: EditItemView(item: item)) {
             Label {

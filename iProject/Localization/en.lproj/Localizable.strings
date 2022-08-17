@@ -9,6 +9,7 @@
 /* GENERAL STRINGS */
 
 "OK" = "OK";
+"Cancel" = "Cancel";
 "Delete" = "Delete";
 "Basic settings" = "Basic settings";
 
@@ -52,7 +53,7 @@
 /* EDITING PROJECTS */
 
 "Edit Project" = "Edit Project";
-"Project name" = "Project name";
+"Name" = "Name";
 "Description of this project" = "Description of this project";
 "Custom project color" = "Custom project color";
 
@@ -82,7 +83,7 @@
 /* EDITING ITEMS */
 
 "Edit Item" = "Edit Item";
-"Item name" = "Item name";
+"Name" = "Name";
 "Description" = "Description";
 "Priority" = "Priority";
 "Low" = "Low";
