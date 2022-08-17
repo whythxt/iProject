@@ -59,11 +59,11 @@
 /* Options to close (mark as finished), open (mark as unfinished), or delete a project. */
 
 "Close this project" = "Close this project";
-"Closing a project moves it from the Open to Closed tab; deleting it removes the project entirely." = "Closing a project moves it from the Open to Closed tab; deleting it removes the project entirely.";
+"Closing a project moves it from the Open to Closed tab; Deleting it removes the project entirely." = "Closing a project moves it from the Open to Closed tab; Deleting it removes the project entirely.";
 "Reopen this project" = "Reopen this project";
 "Delete this project" = "Delete this project";
-"Delete project?" = "Delete project?";
-"Are you sure you want to delete this project? You will also delete all the items it contains." = "Are you sure you want to delete this project? You will also delete all the items it contains.";
+"Delete project" = "Delete project";
+"Are you sure you want to delete this project? You will also delete all items it contains." = "Are you sure you want to delete this project? You will also delete all items it contains.";
 
 "Select a project color" = "Select a project color";
 "Pink" = "Pink";
