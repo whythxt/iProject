@@ -15,13 +15,13 @@ class DataController: ObservableObject {
     /// Container used to store all our data.
     let container: NSPersistentContainer
 
-    /// Initializes a data controller, either in memory (for temporary use such as testing and previewing),
+    /// Initialises a data controller, either in memory (for temporary use such as testing and previewing),
     /// or on permanent storage (for use in regular app runs.)
     ///
     /// Defaults to permanent storage.
     /// - Parameter inMemory: Whether to store this data in temporary memory or not.
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Main")
+        container = NSPersistentContainer(name: "Main", managedObjectModel: Self.model)
 
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
@@ -48,6 +48,24 @@ class DataController: ObservableObject {
         }
 
         return dataController
+    }()
+
+    /// Static property that will locate the file Main.momd in our bundle and
+    /// load it into an NSManagedObjectModel instance we can send back
+    ///
+    /// BaseTestCase and our main app create their own instances of DataControllers.
+    /// When NSPersistentContainer starts up, it loads up all entities and gets confused
+    /// there are now two Item entities, both saying they should own the Item class.
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("Failed to locate model file")
+        }
+
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failed to load model file")
+        }
+
+        return managedObjectModel
     }()
 
     /// Creates example projects and items for testing purposes.
