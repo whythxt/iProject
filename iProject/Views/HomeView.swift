@@ -35,8 +35,8 @@ struct HomeView: View {
                     }
 
                     VStack(alignment: .leading) {
-                        ItemList(title: "Up next", items: vm.upNext)
-                        ItemList(title: "More to explore", items: vm.moreToExplore)
+                        ItemList(title: "Up next", items: $vm.upNext)
+                        ItemList(title: "More to explore", items: $vm.moreToExplore)
                     }
                     .padding(.horizontal)
                 }
