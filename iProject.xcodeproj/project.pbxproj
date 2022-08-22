@@ -29,6 +29,8 @@
 		AB08EF6328B27897000B62EA /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF6228B27897000B62EA /* PerformanceTests.swift */; };
 		AB08EF6B28B27F0C000B62EA /* iProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF6A28B27F0C000B62EA /* iProjectUITests.swift */; };
 		AB08EF6D28B27F0C000B62EA /* iProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF6C28B27F0C000B62EA /* iProjectUITestsLaunchTests.swift */; };
+		AB08EF7428B38403000B62EA /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7328B38403000B62EA /* ProjectsViewModel.swift */; };
+		AB08EF7628B39091000B62EA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7528B39091000B62EA /* HomeViewModel.swift */; };
 		ABA4C48F28A65D9600524F35 /* iProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C48E28A65D9600524F35 /* iProjectApp.swift */; };
 		ABA4C49128A65D9600524F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C49028A65D9600524F35 /* ContentView.swift */; };
 		ABA4C49328A65D9700524F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA4C49228A65D9700524F35 /* Assets.xcassets */; };
@@ -92,6 +94,8 @@
 		AB08EF6828B27F0C000B62EA /* iProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB08EF6A28B27F0C000B62EA /* iProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectUITests.swift; sourceTree = "<group>"; };
 		AB08EF6C28B27F0C000B62EA /* iProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB08EF7328B38403000B62EA /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
+		AB08EF7528B39091000B62EA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ABA4C48B28A65D9600524F35 /* iProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA4C48E28A65D9600524F35 /* iProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectApp.swift; sourceTree = "<group>"; };
 		ABA4C49028A65D9600524F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -232,8 +236,8 @@
 				ABA4C4A328A666EE00524F35 /* ProjectsView.swift */,
 				ABA4C4A828A7F19C00524F35 /* EditItemView.swift */,
 				ABA4C4DD28A804DE00524F35 /* EditProjectView.swift */,
-				AB02FDAC28A94F14001317F5 /* SelectSomethingView.swift */,
 				AB02FDB428AA84EE001317F5 /* AwardsView.swift */,
+				AB02FDAC28A94F14001317F5 /* SelectSomethingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				ABA4C49F28A6606600524F35 /* DataController.swift */,
+				AB08EF7328B38403000B62EA /* ProjectsViewModel.swift */,
+				AB08EF7528B39091000B62EA /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				AB02FDB528AA84EE001317F5 /* AwardsView.swift in Sources */,
 				ABA4C4A028A6606600524F35 /* DataController.swift in Sources */,
 				ABA4C49128A65D9600524F35 /* ContentView.swift in Sources */,
+				AB08EF7628B39091000B62EA /* HomeViewModel.swift in Sources */,
 				AB02FDB728AA9406001317F5 /* Color-Additions.swift in Sources */,
 				ABA4C4DE28A804DE00524F35 /* EditProjectView.swift in Sources */,
 				ABA4C4B128A7F91A00524F35 /* Project-CoreDataHelpers.swift in Sources */,
@@ -481,6 +488,7 @@
 				AB02FDCC28ACE5EC001317F5 /* ItemList.swift in Sources */,
 				ABA4C4A928A7F19C00524F35 /* EditItemView.swift in Sources */,
 				ABA4C4AB28A7F72800524F35 /* ItemRow.swift in Sources */,
+				AB08EF7428B38403000B62EA /* ProjectsViewModel.swift in Sources */,
 				ABA4C4AE28A7F86C00524F35 /* Item-CoreDataHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

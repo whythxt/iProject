@@ -9,13 +9,7 @@ import CoreData
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var dataController: DataController
-
-    @FetchRequest(
-        entity: Project.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
-        predicate: NSPredicate(format: "closed = false")
-    ) var projects: FetchedResults<Project>
+    @StateObject var vm: ViewModel
 
     static let tag: String? = "Home"
 
@@ -23,22 +17,10 @@ struct HomeView: View {
         [GridItem(.fixed(100))]
     }
 
-    let items: FetchRequest<Item>
+    init(dataController: DataController) {
+        let vm = ViewModel(dataController: dataController)
+        _vm = StateObject(wrappedValue: vm)
 
-    init() {
-        // Construct a fetch request to show the 10 highest-priority,
-        // incomplete items from open projects.
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
-
-        let completedPredicate = NSPredicate(format: "completed = false")
-        let openPredicate = NSPredicate(format: "project.closed = false")
-        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
-
-        request.predicate = compoundPredicate
-        request.sortDescriptors = [NSSortDescriptor(keyPath: \Item.priority, ascending: false)]
-        request.fetchLimit = 10
-
-        items = FetchRequest(fetchRequest: request)
     }
 
     var body: some View {
@@ -47,14 +29,14 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHGrid(rows: projectRows) {
-                            ForEach(projects, content: ProjectSummary.init)
+                            ForEach(vm.projects, content: ProjectSummary.init)
                         }
                         .padding([.horizontal, .top], 10)
                     }
 
                     VStack(alignment: .leading) {
-                        ItemList(title: "Up next", items: items.wrappedValue.prefix(3))
-                        ItemList(title: "More to explore", items: items.wrappedValue.dropFirst(3))
+                        ItemList(title: "Up next", items: vm.upNext)
+                        ItemList(title: "More to explore", items: vm.moreToExplore)
                     }
                     .padding(.horizontal)
                 }
@@ -67,6 +49,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(dataController: .preview)
     }
 }
