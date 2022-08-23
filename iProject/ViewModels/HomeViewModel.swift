@@ -6,12 +6,14 @@
 //
 
 import CoreData
+import CoreSpotlight
 import Foundation
 
 extension HomeView {
     class ViewModel: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
         @Published var projects = [Project]()
         @Published var items = [Item]()
+        @Published var selectedItem: Item?
 
         @Published var upNext = ArraySlice<Item>()
         @Published var moreToExplore = ArraySlice<Item>()
@@ -85,6 +87,16 @@ extension HomeView {
         func addSampleData() {
             dataController.deleteAll()
             try? dataController.createSampleData()
+        }
+
+        func selectItem(with id: String) {
+            selectedItem = dataController.item(with: id)
+        }
+
+        func loadSpotlightItem(_ userActivity: NSUserActivity) {
+            if let uniqueID = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+                selectItem(with: uniqueID)
+            }
         }
     }
 }

@@ -246,8 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				ABA4C49F28A6606600524F35 /* DataController.swift */,
-				AB08EF7328B38403000B62EA /* ProjectsViewModel.swift */,
 				AB08EF7528B39091000B62EA /* HomeViewModel.swift */,
+				AB08EF7328B38403000B62EA /* ProjectsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -435,7 +435,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "alias swiftlint=\"/opt/homebrew/bin/swiftlint\"\n\nif swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "alias swiftlint=\"/opt/homebrew/bin/swiftlint\"\n\nif swiftlint >/dev/null; then\n  swiftlint\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

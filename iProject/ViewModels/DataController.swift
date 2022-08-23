@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import CoreSpotlight
 import SwiftUI
 
 /// An environment singleton responsible for managing our Core Data stack, including handling saving,
@@ -35,12 +36,12 @@ class DataController: ObservableObject {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
 
-            #if DEBUG
+#if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
                 self.deleteAll()
                 UIView.setAnimationsEnabled(false)
             }
-            #endif
+#endif
         }
     }
 
@@ -110,6 +111,14 @@ class DataController: ObservableObject {
     }
 
     func delete(_ object: NSManagedObject) {
+        let id = object.objectID.uriRepresentation().absoluteString
+
+        if object is Item {
+            CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
+        } else {
+            CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+        }
+
         container.viewContext.delete(object)
     }
 
@@ -127,7 +136,10 @@ class DataController: ObservableObject {
 
         if let delete = try? container.viewContext.execute(batchDeleteRequest1) as? NSBatchDeleteResult {
             let changes = [NSDeletedObjectsKey: delete.result as? [NSManagedObjectID] ?? []]
-            NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [container.viewContext])
+            NSManagedObjectContext.mergeChanges(
+                fromRemoteContextSave: changes,
+                into: [container.viewContext]
+            )
         }
     }
 
@@ -155,5 +167,39 @@ class DataController: ObservableObject {
 //            fatalError("Unknown award criterion: \(award.criterion)")
             return false
         }
+    }
+
+    func update(_ item: Item) {
+        // Create an item ID.
+        let itemID = item.objectID.uriRepresentation().absoluteString
+        let projectID = item.project?.objectID.uriRepresentation().absoluteString
+
+        // Set up attributes.
+        let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+        attributeSet.title = item.itemTitle
+        attributeSet.contentDescription = item.itemDetail
+
+        // Wrap them up with Spotlight record.
+        let searchableItem = CSSearchableItem(
+            uniqueIdentifier: itemID,
+            domainIdentifier: projectID,
+            attributeSet: attributeSet
+        )
+
+        // Send it all off to Core Spotlight for indexing.
+        CSSearchableIndex.default().indexSearchableItems([searchableItem])
+
+        // Ensure the changed data also gets written to Core Data.
+        save()
+    }
+
+    // Figure out which object was selected in Spotlight.
+    func item(with uniqueID: String) -> Item? {
+        guard let url = URL(string: uniqueID) else { return nil }
+
+        guard let id = container.persistentStoreCoordinator.managedObjectID(
+            forURIRepresentation: url) else { return nil }
+
+        return try? container.viewContext.existingObject(with: id) as? Item
     }
 }
