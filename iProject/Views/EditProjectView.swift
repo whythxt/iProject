@@ -17,6 +17,10 @@ struct EditProjectView: View {
     @State private var detail: String
     @State private var color: String
     @State private var showingAlert = false
+    @State private var showingError = false
+
+    @State private var remindMe: Bool
+    @State private var reminder: Date
 
     @State private var engine = try? CHHapticEngine()
 
@@ -32,6 +36,14 @@ struct EditProjectView: View {
         _title = State(wrappedValue: project.projectTitle)
         _detail = State(wrappedValue: project.projectDetail)
         _color = State(wrappedValue: project.projectColor)
+
+        if let projectReminder = project.reminder {
+            _reminder = State(wrappedValue: projectReminder)
+            _remindMe = State(wrappedValue: true)
+        } else {
+            _reminder = State(wrappedValue: Date())
+            _remindMe = State(wrappedValue: false)
+        }
     }
 
     var body: some View {
@@ -50,6 +62,26 @@ struct EditProjectView: View {
                 .padding(.vertical)
             } header: {
                 Text("Custom color")
+            }
+
+            Section {
+                Toggle("Show reminders", isOn: $remindMe.animation().onChange(update))
+                    .alert("Oops!", isPresented: $showingError) {
+                        Button("Check Settings", action: showAppSettings)
+                        Button("Cancel", role: .cancel) { }
+                    } message: {
+                        Text("There was a problem. Please check you have notifications enabled.")
+                    }
+
+                if remindMe {
+                    DatePicker(
+                        "Reminder time",
+                        selection: $reminder.onChange(update),
+                        displayedComponents: .hourAndMinute
+                    )
+                }
+            } header: {
+                Text("Project reminders")
             }
 
             Section {
@@ -77,6 +109,22 @@ struct EditProjectView: View {
         project.title = title
         project.detail = detail
         project.color = color
+
+        if remindMe {
+            project.reminder = reminder
+
+            dataController.addReminders(for: project) { success in
+                if success == false {
+                    project.reminder = nil
+                    remindMe = false
+
+                    showingError = true
+                }
+            }
+        } else {
+            project.reminder = nil
+            dataController.removeReminders(for: project)
+        }
     }
 
     func delete() {
@@ -149,6 +197,16 @@ struct EditProjectView: View {
         .accessibilityElement(children: .ignore)
         .accessibilityAddTraits(item == color ? [.isButton, .isSelected] : .isButton)
         .accessibilityLabel(LocalizedStringKey(item))
+    }
+
+    func showAppSettings() {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl)
+        }
     }
 }
 

@@ -54,8 +54,8 @@
 
 "Edit Project" = "Projekt szerkesztése";
 "Name" = "Név";
-"Description of this project" = "Projekt dokumentáció";
-"Custom project color" = "Egyedi projekt szín";
+"Description" = "Dokumentáció";
+"Custom color" = "Egyedi szín";
 
 /* Options to close (mark as finished), open (mark as unfinished), or delete a project. */
 
@@ -102,3 +102,12 @@
 /* Shown by default when the user hasn't select a project or item */
 
 "Please select something from the menu to begin." = "A kezdéshez válasszon valamit a menüből.";
+
+/* Notifications */
+
+"Project reminders" = "Projekt emlékeztető";
+"Show reminders" = "Emlékeztetők megjelenítése";
+"Oops!" = "Hoppá!";
+"There was a problem. Please check you have notifications enabled." = "Probléma. Ellenőrizze, hogy engedélyezve vannak az értesítések.";
+"Check Settings" = "Ellenőrizze a Beállításokat";
+"Reminder time" = "Emlékeztető ideje";

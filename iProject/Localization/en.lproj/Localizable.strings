@@ -54,8 +54,8 @@
 
 "Edit Project" = "Edit Project";
 "Name" = "Name";
-"Description of this project" = "Description of this project";
-"Custom project color" = "Custom project color";
+"Description" = "Description";
+"Custom color" = "Custom color";
 
 /* Options to close (mark as finished), open (mark as unfinished), or delete a project. */
 
@@ -102,3 +102,12 @@
 /* Shown by default when the user hasn't select a project or item */
 
 "Please select something from the menu to begin." = "Please select something from the menu to begin.";
+
+/* Notifications */
+
+"Project reminders" = "Project reminders";
+"Show reminders" = "Show reminders";
+"Oops!" = "Oops!";
+"There was a problem. Please check you have notifications enabled." = "There was a problem. Please check you have notifications enabled.";
+"Check Settings" = "Check Settings";
+"Reminder time" = "Reminder time";
