@@ -114,7 +114,7 @@ struct EditProjectView: View {
             project.reminder = reminder
 
             dataController.addReminders(for: project) { success in
-                if success == false {
+                if !success {
                     project.reminder = nil
                     remindMe = false
 

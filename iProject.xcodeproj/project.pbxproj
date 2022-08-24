@@ -31,6 +31,11 @@
 		AB08EF6D28B27F0C000B62EA /* iProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF6C28B27F0C000B62EA /* iProjectUITestsLaunchTests.swift */; };
 		AB08EF7428B38403000B62EA /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7328B38403000B62EA /* ProjectsViewModel.swift */; };
 		AB08EF7628B39091000B62EA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7528B39091000B62EA /* HomeViewModel.swift */; };
+		AB08EF7828B699B7000B62EA /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7728B699B7000B62EA /* UnlockManager.swift */; };
+		AB08EF7B28B6D502000B62EA /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7A28B6D502000B62EA /* SKProduct-LocalizedPrice.swift */; };
+		AB08EF7D28B6D578000B62EA /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7C28B6D578000B62EA /* PurchaseButton.swift */; };
+		AB08EF7F28B6D61E000B62EA /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7E28B6D61E000B62EA /* ProductView.swift */; };
+		AB08EF8128B6D9FC000B62EA /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF8028B6D9FC000B62EA /* UnlockView.swift */; };
 		ABA4C48F28A65D9600524F35 /* iProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C48E28A65D9600524F35 /* iProjectApp.swift */; };
 		ABA4C49128A65D9600524F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C49028A65D9600524F35 /* ContentView.swift */; };
 		ABA4C49328A65D9700524F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA4C49228A65D9700524F35 /* Assets.xcassets */; };
@@ -96,6 +101,12 @@
 		AB08EF6C28B27F0C000B62EA /* iProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AB08EF7328B38403000B62EA /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		AB08EF7528B39091000B62EA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AB08EF7728B699B7000B62EA /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
+		AB08EF7928B69B92000B62EA /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		AB08EF7A28B6D502000B62EA /* SKProduct-LocalizedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalizedPrice.swift"; sourceTree = "<group>"; };
+		AB08EF7C28B6D578000B62EA /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		AB08EF7E28B6D61E000B62EA /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		AB08EF8028B6D9FC000B62EA /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
 		ABA4C48B28A65D9600524F35 /* iProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA4C48E28A65D9600524F35 /* iProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectApp.swift; sourceTree = "<group>"; };
 		ABA4C49028A65D9600524F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -207,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				ABA4C48E28A65D9600524F35 /* iProjectApp.swift */,
+				AB08EF7728B699B7000B62EA /* UnlockManager.swift */,
+				AB08EF7928B69B92000B62EA /* Configuration.storekit */,
 				ABA4C4AF28A7F90300524F35 /* Extensions */,
 				ABA4C4AC28A7F73000524F35 /* Components */,
 				ABA4C4A728A6671B00524F35 /* Models */,
@@ -238,6 +251,8 @@
 				ABA4C4DD28A804DE00524F35 /* EditProjectView.swift */,
 				AB02FDB428AA84EE001317F5 /* AwardsView.swift */,
 				AB02FDAC28A94F14001317F5 /* SelectSomethingView.swift */,
+				AB08EF7E28B6D61E000B62EA /* ProductView.swift */,
+				AB08EF8028B6D9FC000B62EA /* UnlockView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +283,7 @@
 				ABA4C4AA28A7F72800524F35 /* ItemRow.swift */,
 				ABA4C4B428A800F600524F35 /* ProjectHeader.swift */,
 				AB02FDCD28ACE6D7001317F5 /* ProjectSummary.swift */,
+				AB08EF7C28B6D578000B62EA /* PurchaseButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -281,6 +297,7 @@
 				ABA4C4AD28A7F86C00524F35 /* Item-CoreDataHelpers.swift */,
 				ABA4C4B028A7F91A00524F35 /* Project-CoreDataHelpers.swift */,
 				AB02FDA828A9473E001317F5 /* Sequence-Sorting.swift */,
+				AB08EF7A28B6D502000B62EA /* SKProduct-LocalizedPrice.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,14 +486,19 @@
 			files = (
 				ABA4C4A428A666EE00524F35 /* ProjectsView.swift in Sources */,
 				ABA4C49E28A65E0300524F35 /* Main.xcdatamodeld in Sources */,
+				AB08EF8128B6D9FC000B62EA /* UnlockView.swift in Sources */,
 				AB02FDB528AA84EE001317F5 /* AwardsView.swift in Sources */,
 				ABA4C4A028A6606600524F35 /* DataController.swift in Sources */,
 				ABA4C49128A65D9600524F35 /* ContentView.swift in Sources */,
+				AB08EF7828B699B7000B62EA /* UnlockManager.swift in Sources */,
 				AB08EF7628B39091000B62EA /* HomeViewModel.swift in Sources */,
 				AB02FDB728AA9406001317F5 /* Color-Additions.swift in Sources */,
 				ABA4C4DE28A804DE00524F35 /* EditProjectView.swift in Sources */,
+				AB08EF7B28B6D502000B62EA /* SKProduct-LocalizedPrice.swift in Sources */,
+				AB08EF7F28B6D61E000B62EA /* ProductView.swift in Sources */,
 				ABA4C4B128A7F91A00524F35 /* Project-CoreDataHelpers.swift in Sources */,
 				AB02FDAD28A94F14001317F5 /* SelectSomethingView.swift in Sources */,
+				AB08EF7D28B6D578000B62EA /* PurchaseButton.swift in Sources */,
 				AB02FDB328AA8423001317F5 /* Award.swift in Sources */,
 				ABA4C4B328A7FD5300524F35 /* Binding-onChange.swift in Sources */,
 				AB02FDCE28ACE6D7001317F5 /* ProjectSummary.swift in Sources */,

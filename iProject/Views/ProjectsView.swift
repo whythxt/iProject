@@ -101,6 +101,9 @@ struct ProjectsView: View {
                 Button("Creation Date") { vm.sortOrder = .creationDate }
                 Button("Title") { vm.sortOrder = .title }
             }
+            .sheet(isPresented: $vm.showingUnlockView) {
+                UnlockView()
+            }
 
             SelectSomethingView()
         }
