@@ -10,6 +10,8 @@ import SwiftUI
 @main
 // swiftlint:disable:next type_name
 struct iProjectApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     @StateObject var dataController: DataController
     @StateObject var unlockManager: UnlockManager
 

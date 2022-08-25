@@ -292,4 +292,20 @@ class DataController: ObservableObject {
             SKStoreReviewController.requestReview(in: windowScene)
         }
     }
+
+    // @discardableResult - won't be using the Boolean if we're
+    // calling straight from a quick action.
+    @discardableResult func addProject() -> Bool {
+        let canCreate = fullVersionUnlocked || count(for: Project.fetchRequest()) < 3
+
+        if canCreate {
+            let project = Project(context: container.viewContext)
+            project.closed = false
+            project.creation = Date()
+            save()
+            return true
+        } else {
+            return false
+        }
+    }
 }

@@ -36,6 +36,8 @@
 		AB08EF7D28B6D578000B62EA /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7C28B6D578000B62EA /* PurchaseButton.swift */; };
 		AB08EF7F28B6D61E000B62EA /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF7E28B6D61E000B62EA /* ProductView.swift */; };
 		AB08EF8128B6D9FC000B62EA /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF8028B6D9FC000B62EA /* UnlockView.swift */; };
+		AB08EF8428B79767000B62EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF8328B79767000B62EA /* AppDelegate.swift */; };
+		AB08EF8628B79771000B62EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF8528B79771000B62EA /* SceneDelegate.swift */; };
 		ABA4C48F28A65D9600524F35 /* iProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C48E28A65D9600524F35 /* iProjectApp.swift */; };
 		ABA4C49128A65D9600524F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C49028A65D9600524F35 /* ContentView.swift */; };
 		ABA4C49328A65D9700524F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA4C49228A65D9700524F35 /* Assets.xcassets */; };
@@ -107,6 +109,9 @@
 		AB08EF7C28B6D578000B62EA /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
 		AB08EF7E28B6D61E000B62EA /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		AB08EF8028B6D9FC000B62EA /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
+		AB08EF8228B76F60000B62EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AB08EF8328B79767000B62EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB08EF8528B79771000B62EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ABA4C48B28A65D9600524F35 /* iProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA4C48E28A65D9600524F35 /* iProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectApp.swift; sourceTree = "<group>"; };
 		ABA4C49028A65D9600524F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -217,8 +222,12 @@
 		ABA4C48D28A65D9600524F35 /* iProject */ = {
 			isa = PBXGroup;
 			children = (
+				AB08EF8228B76F60000B62EA /* Info.plist */,
 				ABA4C48E28A65D9600524F35 /* iProjectApp.swift */,
+				AB08EF8328B79767000B62EA /* AppDelegate.swift */,
+				AB08EF8528B79771000B62EA /* SceneDelegate.swift */,
 				AB08EF7728B699B7000B62EA /* UnlockManager.swift */,
+				ABA4C49F28A6606600524F35 /* DataController.swift */,
 				AB08EF7928B69B92000B62EA /* Configuration.storekit */,
 				ABA4C4AF28A7F90300524F35 /* Extensions */,
 				ABA4C4AC28A7F73000524F35 /* Components */,
@@ -260,7 +269,6 @@
 		ABA4C4A628A6671400524F35 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				ABA4C49F28A6606600524F35 /* DataController.swift */,
 				AB08EF7528B39091000B62EA /* HomeViewModel.swift */,
 				AB08EF7328B38403000B62EA /* ProjectsViewModel.swift */,
 			);
@@ -488,6 +496,8 @@
 				ABA4C49E28A65E0300524F35 /* Main.xcdatamodeld in Sources */,
 				AB08EF8128B6D9FC000B62EA /* UnlockView.swift in Sources */,
 				AB02FDB528AA84EE001317F5 /* AwardsView.swift in Sources */,
+				AB08EF8428B79767000B62EA /* AppDelegate.swift in Sources */,
+				AB08EF8628B79771000B62EA /* SceneDelegate.swift in Sources */,
 				ABA4C4A028A6606600524F35 /* DataController.swift in Sources */,
 				ABA4C49128A65D9600524F35 /* ContentView.swift in Sources */,
 				AB08EF7828B699B7000B62EA /* UnlockManager.swift in Sources */,
@@ -756,6 +766,7 @@
 				DEVELOPMENT_TEAM = 3KU8C49PA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -785,6 +796,7 @@
 				DEVELOPMENT_TEAM = 3KU8C49PA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
