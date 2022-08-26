@@ -38,6 +38,24 @@
 		AB08EF8128B6D9FC000B62EA /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF8028B6D9FC000B62EA /* UnlockView.swift */; };
 		AB08EF8428B79767000B62EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF8328B79767000B62EA /* AppDelegate.swift */; };
 		AB08EF8628B79771000B62EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF8528B79771000B62EA /* SceneDelegate.swift */; };
+		AB08EF8E28B7C7EE000B62EA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB08EF8D28B7C7EE000B62EA /* WidgetKit.framework */; };
+		AB08EF9028B7C7EE000B62EA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB08EF8F28B7C7EE000B62EA /* SwiftUI.framework */; };
+		AB08EF9328B7C7EE000B62EA /* iProjectWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EF9228B7C7EE000B62EA /* iProjectWidget.swift */; };
+		AB08EF9528B7C7F0000B62EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB08EF9428B7C7F0000B62EA /* Assets.xcassets */; };
+		AB08EF9928B7C7F0000B62EA /* iProjectWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AB08EF8B28B7C7EE000B62EA /* iProjectWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AB08EF9E28B7C93B000B62EA /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C49C28A65E0300524F35 /* Main.xcdatamodeld */; };
+		AB08EF9F28B7C95C000B62EA /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C4AD28A7F86C00524F35 /* Item-CoreDataHelpers.swift */; };
+		AB08EFA028B7C96F000B62EA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C49F28A6606600524F35 /* DataController.swift */; };
+		AB08EFA228B7CA17000B62EA /* DataController-Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EFA128B7CA17000B62EA /* DataController-Reminders.swift */; };
+		AB08EFA428B7CAC6000B62EA /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EFA328B7CAC6000B62EA /* DataController-Awards.swift */; };
+		AB08EFA628B7CB34000B62EA /* DataController-AppReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EFA528B7CB34000B62EA /* DataController-AppReview.swift */; };
+		AB08EFA928B7FA4B000B62EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB02FDC128ABC981001317F5 /* Localizable.strings */; };
+		AB08EFAA28B7FC4C000B62EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA4C4DB28A8040400524F35 /* Colors.xcassets */; };
+		AB08EFAB28B7FC67000B62EA /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C4B028A7F91A00524F35 /* Project-CoreDataHelpers.swift */; };
+		AB08EFAC28B7FC7C000B62EA /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02FDA828A9473E001317F5 /* Sequence-Sorting.swift */; };
+		AB08EFAE28B934D4000B62EA /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EFAD28B934D4000B62EA /* DataProvider.swift */; };
+		AB08EFB028B93504000B62EA /* SimpleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EFAF28B93504000B62EA /* SimpleWidget.swift */; };
+		AB08EFB228B9354E000B62EA /* ComplexWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08EFB128B9354E000B62EA /* ComplexWidget.swift */; };
 		ABA4C48F28A65D9600524F35 /* iProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C48E28A65D9600524F35 /* iProjectApp.swift */; };
 		ABA4C49128A65D9600524F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C49028A65D9600524F35 /* ContentView.swift */; };
 		ABA4C49328A65D9700524F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA4C49228A65D9700524F35 /* Assets.xcassets */; };
@@ -71,7 +89,28 @@
 			remoteGlobalIDString = ABA4C48A28A65D9600524F35;
 			remoteInfo = iProject;
 		};
+		AB08EF9728B7C7F0000B62EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABA4C48328A65D9600524F35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB08EF8A28B7C7EE000B62EA;
+			remoteInfo = iProjectWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB08EF9D28B7C7F0000B62EA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AB08EF9928B7C7F0000B62EA /* iProjectWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AB02FDA828A9473E001317F5 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
@@ -112,6 +151,20 @@
 		AB08EF8228B76F60000B62EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AB08EF8328B79767000B62EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB08EF8528B79771000B62EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AB08EF8B28B7C7EE000B62EA /* iProjectWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iProjectWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB08EF8D28B7C7EE000B62EA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AB08EF8F28B7C7EE000B62EA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AB08EF9228B7C7EE000B62EA /* iProjectWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectWidget.swift; sourceTree = "<group>"; };
+		AB08EF9428B7C7F0000B62EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB08EF9628B7C7F0000B62EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB08EFA128B7CA17000B62EA /* DataController-Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Reminders.swift"; sourceTree = "<group>"; };
+		AB08EFA328B7CAC6000B62EA /* DataController-Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Awards.swift"; sourceTree = "<group>"; };
+		AB08EFA528B7CB34000B62EA /* DataController-AppReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-AppReview.swift"; sourceTree = "<group>"; };
+		AB08EFA728B7CC32000B62EA /* iProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iProject.entitlements; sourceTree = "<group>"; };
+		AB08EFA828B7CCA1000B62EA /* iProjectWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iProjectWidgetExtension.entitlements; sourceTree = "<group>"; };
+		AB08EFAD28B934D4000B62EA /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		AB08EFAF28B93504000B62EA /* SimpleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWidget.swift; sourceTree = "<group>"; };
+		AB08EFB128B9354E000B62EA /* ComplexWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexWidget.swift; sourceTree = "<group>"; };
 		ABA4C48B28A65D9600524F35 /* iProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA4C48E28A65D9600524F35 /* iProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProjectApp.swift; sourceTree = "<group>"; };
 		ABA4C49028A65D9600524F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +196,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB08EF8828B7C7EE000B62EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB08EF9028B7C7EE000B62EA /* SwiftUI.framework in Frameworks */,
+				AB08EF8E28B7C7EE000B62EA /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +261,37 @@
 			path = iProjectUITests;
 			sourceTree = "<group>";
 		};
+		AB08EF8C28B7C7EE000B62EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB08EF8D28B7C7EE000B62EA /* WidgetKit.framework */,
+				AB08EF8F28B7C7EE000B62EA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB08EF9128B7C7EE000B62EA /* iProjectWidget */ = {
+			isa = PBXGroup;
+			children = (
+				AB08EF9228B7C7EE000B62EA /* iProjectWidget.swift */,
+				AB08EFB128B9354E000B62EA /* ComplexWidget.swift */,
+				AB08EFAF28B93504000B62EA /* SimpleWidget.swift */,
+				AB08EFAD28B934D4000B62EA /* DataProvider.swift */,
+				AB08EF9428B7C7F0000B62EA /* Assets.xcassets */,
+				AB08EF9628B7C7F0000B62EA /* Info.plist */,
+			);
+			path = iProjectWidget;
+			sourceTree = "<group>";
+		};
 		ABA4C48228A65D9600524F35 = {
 			isa = PBXGroup;
 			children = (
+				AB08EFA828B7CCA1000B62EA /* iProjectWidgetExtension.entitlements */,
 				ABA4C48D28A65D9600524F35 /* iProject */,
 				AB08EF4B28AFAD24000B62EA /* iProjectTests */,
 				AB08EF6928B27F0C000B62EA /* iProjectUITests */,
+				AB08EF9128B7C7EE000B62EA /* iProjectWidget */,
+				AB08EF8C28B7C7EE000B62EA /* Frameworks */,
 				ABA4C48C28A65D9600524F35 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -215,6 +302,7 @@
 				ABA4C48B28A65D9600524F35 /* iProject.app */,
 				AB08EF4A28AFAD24000B62EA /* iProjectTests.xctest */,
 				AB08EF6828B27F0C000B62EA /* iProjectUITests.xctest */,
+				AB08EF8B28B7C7EE000B62EA /* iProjectWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +310,7 @@
 		ABA4C48D28A65D9600524F35 /* iProject */ = {
 			isa = PBXGroup;
 			children = (
+				AB08EFA728B7CC32000B62EA /* iProject.entitlements */,
 				AB08EF8228B76F60000B62EA /* Info.plist */,
 				ABA4C48E28A65D9600524F35 /* iProjectApp.swift */,
 				AB08EF8328B79767000B62EA /* AppDelegate.swift */,
@@ -306,6 +395,9 @@
 				ABA4C4B028A7F91A00524F35 /* Project-CoreDataHelpers.swift */,
 				AB02FDA828A9473E001317F5 /* Sequence-Sorting.swift */,
 				AB08EF7A28B6D502000B62EA /* SKProduct-LocalizedPrice.swift */,
+				AB08EFA128B7CA17000B62EA /* DataController-Reminders.swift */,
+				AB08EFA328B7CAC6000B62EA /* DataController-Awards.swift */,
+				AB08EFA528B7CB34000B62EA /* DataController-AppReview.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +441,23 @@
 			productReference = AB08EF6828B27F0C000B62EA /* iProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		AB08EF8A28B7C7EE000B62EA /* iProjectWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB08EF9A28B7C7F0000B62EA /* Build configuration list for PBXNativeTarget "iProjectWidgetExtension" */;
+			buildPhases = (
+				AB08EF8728B7C7EE000B62EA /* Sources */,
+				AB08EF8828B7C7EE000B62EA /* Frameworks */,
+				AB08EF8928B7C7EE000B62EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iProjectWidgetExtension;
+			productName = iProjectWidgetExtension;
+			productReference = AB08EF8B28B7C7EE000B62EA /* iProjectWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		ABA4C48A28A65D9600524F35 /* iProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABA4C49928A65D9700524F35 /* Build configuration list for PBXNativeTarget "iProject" */;
@@ -357,10 +466,12 @@
 				ABA4C48828A65D9600524F35 /* Frameworks */,
 				ABA4C48928A65D9600524F35 /* Resources */,
 				AB02FDCF28ADA723001317F5 /* SwiftLint */,
+				AB08EF9D28B7C7F0000B62EA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AB08EF9828B7C7F0000B62EA /* PBXTargetDependency */,
 			);
 			name = iProject;
 			productName = iProject;
@@ -385,6 +496,9 @@
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = ABA4C48A28A65D9600524F35;
 					};
+					AB08EF8A28B7C7EE000B62EA = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					ABA4C48A28A65D9600524F35 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -407,6 +521,7 @@
 				ABA4C48A28A65D9600524F35 /* iProject */,
 				AB08EF4928AFAD24000B62EA /* iProjectTests */,
 				AB08EF6728B27F0C000B62EA /* iProjectUITests */,
+				AB08EF8A28B7C7EE000B62EA /* iProjectWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -425,6 +540,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB08EF8928B7C7EE000B62EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB08EFAA28B7FC4C000B62EA /* Colors.xcassets in Resources */,
+				AB08EF9528B7C7F0000B62EA /* Assets.xcassets in Resources */,
+				AB08EFA928B7FA4B000B62EA /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +613,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AB08EF8728B7C7EE000B62EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB08EF9E28B7C93B000B62EA /* Main.xcdatamodeld in Sources */,
+				AB08EFA028B7C96F000B62EA /* DataController.swift in Sources */,
+				AB08EF9328B7C7EE000B62EA /* iProjectWidget.swift in Sources */,
+				AB08EFB028B93504000B62EA /* SimpleWidget.swift in Sources */,
+				AB08EFB228B9354E000B62EA /* ComplexWidget.swift in Sources */,
+				AB08EFAE28B934D4000B62EA /* DataProvider.swift in Sources */,
+				AB08EFAC28B7FC7C000B62EA /* Sequence-Sorting.swift in Sources */,
+				AB08EF9F28B7C95C000B62EA /* Item-CoreDataHelpers.swift in Sources */,
+				AB08EFAB28B7FC67000B62EA /* Project-CoreDataHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABA4C48728A65D9600524F35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +636,7 @@
 				ABA4C4A428A666EE00524F35 /* ProjectsView.swift in Sources */,
 				ABA4C49E28A65E0300524F35 /* Main.xcdatamodeld in Sources */,
 				AB08EF8128B6D9FC000B62EA /* UnlockView.swift in Sources */,
+				AB08EFA428B7CAC6000B62EA /* DataController-Awards.swift in Sources */,
 				AB02FDB528AA84EE001317F5 /* AwardsView.swift in Sources */,
 				AB08EF8428B79767000B62EA /* AppDelegate.swift in Sources */,
 				AB08EF8628B79771000B62EA /* SceneDelegate.swift in Sources */,
@@ -505,6 +647,8 @@
 				AB02FDB728AA9406001317F5 /* Color-Additions.swift in Sources */,
 				ABA4C4DE28A804DE00524F35 /* EditProjectView.swift in Sources */,
 				AB08EF7B28B6D502000B62EA /* SKProduct-LocalizedPrice.swift in Sources */,
+				AB08EFA628B7CB34000B62EA /* DataController-AppReview.swift in Sources */,
+				AB08EFA228B7CA17000B62EA /* DataController-Reminders.swift in Sources */,
 				AB08EF7F28B6D61E000B62EA /* ProductView.swift in Sources */,
 				ABA4C4B128A7F91A00524F35 /* Project-CoreDataHelpers.swift in Sources */,
 				AB02FDAD28A94F14001317F5 /* SelectSomethingView.swift in Sources */,
@@ -537,6 +681,11 @@
 			isa = PBXTargetDependency;
 			target = ABA4C48A28A65D9600524F35 /* iProject */;
 			targetProxy = AB08EF6E28B27F0C000B62EA /* PBXContainerItemProxy */;
+		};
+		AB08EF9828B7C7F0000B62EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB08EF8A28B7C7EE000B62EA /* iProjectWidgetExtension */;
+			targetProxy = AB08EF9728B7C7F0000B62EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -638,6 +787,62 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = iProject;
+			};
+			name = Release;
+		};
+		AB08EF9B28B7C7F0000B62EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = iProjectWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3KU8C49PA9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iProjectWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iProjectWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = whythat.iProject.iProjectWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB08EF9C28B7C7F0000B62EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = iProjectWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3KU8C49PA9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iProjectWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iProjectWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = whythat.iProject.iProjectWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -758,8 +963,10 @@
 		ABA4C49A28A65D9700524F35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iProject/iProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iProject/Preview Content\"";
@@ -788,8 +995,10 @@
 		ABA4C49B28A65D9700524F35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iProject/iProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iProject/Preview Content\"";
@@ -832,6 +1041,15 @@
 			buildConfigurations = (
 				AB08EF7128B27F0C000B62EA /* Debug */,
 				AB08EF7228B27F0C000B62EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB08EF9A28B7C7F0000B62EA /* Build configuration list for PBXNativeTarget "iProjectWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB08EF9B28B7C7F0000B62EA /* Debug */,
+				AB08EF9C28B7C7F0000B62EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

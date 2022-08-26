@@ -124,3 +124,9 @@
 "Thank you!" = "Köszönjük!";
 "Thank you! Your request is pending approval, but you can carry on using the app in the meantime." = "Köszönöm! Kérése jóváhagyásra vár, de addig is folytathatja az alkalmazás használatát.";
 "Dismiss" = "Elutasít";
+
+/* Widgets */
+"Up next" = "Következő";
+"Nothing for now" = "Egyelőre semmi";
+"Your top-priority item." = "Az elsőbbségi tétel.";
+"Your most important items." = "Az elsőbbségi tételeid.";

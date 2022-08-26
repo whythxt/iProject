@@ -124,3 +124,9 @@
 "Thank you!" = "Thank you!";
 "Thank you! Your request is pending approval, but you can carry on using the app in the meantime." = "Thank you! Your request is pending approval, but you can carry on using the app in the meantime.";
 "Dismiss" = "Dismiss";
+
+/* Widgets */
+"Up next" = "Up next";
+"Nothing for now" = "Nothing for now";
+"Your top-priority item." = "Your top-priority item.";
+"Your most important items." = "Your most important items.";
